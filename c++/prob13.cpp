@@ -4,6 +4,8 @@
 #include <string>
 #include <stdlib.h>
 
+// https://projecteuler.net/problem=13
+
 int main()
 {
     std::list<std::string> numbers;
