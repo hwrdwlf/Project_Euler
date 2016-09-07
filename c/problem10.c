@@ -40,44 +40,24 @@ unsigned long solve1() {
 	return sum;
 }
 
-// Running into some weird memory issues with this implementation
-// Currently doesn't work
-unsigned long solve2() {
-	unsigned long limit = 2000000;
-	unsigned long crosslimit = (unsigned long)sqrt(limit);
-	// create an array of false values based on our upper bound
-	unsigned long* sieve = (unsigned long*)malloc(limit * sizeof(unsigned long));
-	//memset(sieve, 0, sizeof(limit));
-	for(int i = 0; i < limit; i++) {
-		sieve[i] = 0;
-	}
-	unsigned long sum = 0;
 
-	unsigned long n,m;
-	for(n = 4; n <= limit; n++) {
-		if(!sieve[n])
-			sieve[n] = 1;
-	}
-	for(n = 3; n <= crosslimit; n += 2) {
-		if(!sieve[n]){
-			for(m = n*n; m <= limit; m = 2 *n){
-				sieve[m] = 1;
-			}
+unsigned long solve2() {
+	unsigned long sum = 2;
+	for(int i = 3; i < 2000000; i=i+2) {
+		if(is_prime(i)) {
+			sum = sum + i;
 		}
 	}
-	
-	for(n = 2; n <= limit; n++) {
-		if(!sieve[n])
-			sum = sum + n;
-	}
-	free(sieve);
 	return sum;
+
+
 }
 
-
 int main(void) {
+	// takes about 2.155 s
 	printf("Ans: %ld\n", solve1());
-	//printf("Ans: %lu\n", solve2());
+	// takes about 2.128 s
+	printf("Ans: %lu\n", solve2());
 	return 0;
 }
 
