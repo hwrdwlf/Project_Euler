@@ -33,7 +33,7 @@ def read_input(filename):
       j+=1
   return input_data
 
-triangle = read_input('/Users/walla/Desktop/data.txt')
+triangle = read_input('data.txt')
 print triangle
 
 
