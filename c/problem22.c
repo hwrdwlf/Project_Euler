@@ -12,7 +12,7 @@ What is the total of all the name scores in the file?)
 */
 
 int helper(void) {
-		// Based on the description of the problem set this constant
+	// Based on the description of the problem set this constant
 	int lines = 5000;
 	int max_line_length = 100;
 	char** words = (char** )malloc(sizeof(char* ) * lines);
@@ -228,7 +228,11 @@ static int compare(const void* a, const void* b) {
     return strncmp(*ia, *ib, 9);
 }
 
-
+/**
+ * This code doesn't really work. The answer is close but then the program barfs on itself
+ * I wrote this so long ago I'm not really sure how to fix it quickly without devoting a lot 
+ * of time to figure out what is wrong.
+ */
 int main(void) {
 	// Based on the description of the problem set this constant
 	char* buffer;
