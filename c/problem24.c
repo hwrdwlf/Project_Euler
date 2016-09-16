@@ -5,7 +5,6 @@
 // Problem 24 for Project Euler
 // https://projecteuler.net/problem=24
 
-// Permutation algorithm: https://en.wikipedia.org/wiki/Heap%27s_algorithm
 // Lexiographic permutations: https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order
  
 /** 
